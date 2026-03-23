@@ -1,5 +1,5 @@
 @mixin on-small-tablet {
-  @media (min-width: 480px) {
+  @media (min-width: 488px) {
     @content;
   }
 }
@@ -51,7 +51,7 @@
   transition: transform 300ms;
 
   &:hover {
-    transform: scale(0.8);
+    transform: scale(1.2);
   }
 
   &__images {
@@ -77,6 +77,7 @@
     font-weight: 500;
     line-height: 18px;
     color: $color-main-text;
+    transition: color 300ms;
   }
 
   &:hover .card__title {
@@ -173,6 +174,7 @@
     text-transform: uppercase;
 
     background-color: $color-blue;
+    transition: background-color, color, border-color 300ms;
 
     &:hover {
       border-color: $color-blue;
