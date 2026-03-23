@@ -1,0 +1,262 @@
+.catalog {
+  --columns: 1;
+  grid-template-columns: repeat(var(--columns), 200px);
+  justify-content: center;
+  gap: 46px 48px;
+  padding: 50px 40px;
+  display: grid;
+}
+
+@media (width >= 488px) {
+  .catalog {
+    --columns: 2;
+  }
+}
+
+@media (width >= 768px) {
+  .catalog {
+    --columns: 3;
+  }
+}
+
+@media (width >= 1024px) {
+  .catalog {
+    --columns: 4;
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 2px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  height: 406px;
+  font-family: Roboto, sans-serif;
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card__images {
+  width: 160px;
+  height: 134px;
+  padding: 32px 19px 40px;
+  display: flex;
+  top: 33px;
+  left: 100px;
+}
+
+.card__title {
+  color: #060b35;
+  width: 166px;
+  height: 36px;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  transition: color .3s;
+  display: block;
+}
+
+.card:hover .card__title {
+  color: #34568b;
+}
+
+.card__information {
+  color: #616070;
+  white-space: nowrap;
+  width: 98px;
+  height: 14px;
+  margin-top: 4px;
+  margin-left: 16px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  display: block;
+}
+
+.card__reviews {
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+}
+
+.card__reviews-numbers {
+  color: #060b35;
+  align-items: flex-end;
+  width: 53px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  display: flex;
+}
+
+.card__price {
+  justify-content: space-between;
+  width: 166px;
+  height: 18px;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 24px;
+  display: flex;
+}
+
+.card__price-text {
+  color: #616070;
+  width: 31px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  display: block;
+}
+
+.card__price-sum {
+  color: #060b35;
+  width: 50px;
+  height: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  display: block;
+}
+
+.card__button {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #00acdc;
+  border: 1px solid #0000;
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  margin: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 40px;
+  text-decoration: none;
+  transition: background-color, color, border-color .3s;
+  display: block;
+}
+
+.card__button:hover {
+  color: #00acdc;
+  background-color: #fff;
+  border-color: #00acdc;
+}
+
+.stars {
+  align-items: center;
+  width: 96px;
+  height: 16px;
+  display: flex;
+}
+
+.stars__star {
+  background-image: url("star.fa806e3c.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  display: block;
+}
+
+.stars--1 .stars__star:nth-child(-n+1), .stars--2 .stars__star:nth-child(-n+2), .stars--3 .stars__star:nth-child(-n+3), .stars--4 .stars__star:nth-child(-n+4), .stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("star-active.2be54011.svg");
+}
+
+html {
+  --main-color: #00acdc;
+}
+
+.nav {
+  justify-content: space-between;
+  margin: 0;
+  display: flex;
+}
+
+.header {
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-inline: 50px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  display: flex;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.nav__item {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.link {
+  color: #060b35;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: color .3s;
+  display: flex;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--main-color);
+}
+
+.is-active {
+  color: var(--main-color);
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.is-active:after {
+  content: "";
+  background-color: var(--main-color);
+  border-radius: 8px;
+  height: 4px;
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 0;
+  right: 0;
+}
+
+body {
+  margin: 0;
+}
+/*# sourceMappingURL=index.e378193d.css.map */
