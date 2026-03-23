@@ -1,15 +1,15 @@
 .stars {
   display: flex;
   align-items: center;
-  width: 96px;
-  height: 16px;
+  width: $stars-width;
+  height: $stars-height;
 
   &__star {
     display: block;
 
     width: 16px;
     height: 16px;
-    margin-right: 4px;
+    margin-right: $star-margin-right;
 
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;

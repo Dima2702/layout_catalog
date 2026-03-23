@@ -33,13 +33,14 @@ html {
 .link {
   justify-content: center;
   height: 60px;
-  color: #060b35;
+  color: $color-main-text;
   text-decoration: none;
   display: flex;
   align-items: center;
   position: relative;
   margin: 0;
   padding: 0;
+  transition: color 300ms;
 }
 
 .link:hover {
